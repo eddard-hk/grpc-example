@@ -8,9 +8,7 @@ option java_outer_classname = "HeartBeatProto";
 option objc_class_prefix = "HBP";
 
 service HeartBeatMessage {
-
     rpc getHeartBeat(Heart) returns (Beat) {}
-
 }
 
 message Heart {

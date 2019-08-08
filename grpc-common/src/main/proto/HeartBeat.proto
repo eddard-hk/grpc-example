@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package proto;
+
+option java_multiple_files = true;
+option java_package = "org.eddard.grpc";
+option java_outer_classname = "HeartBeatProto";
+option objc_class_prefix = "HBP";
+
+service HeartBeatMessage {
+
+    rpc getHeartBeat(Heart) returns (Beat) {}
+
+}
+
+message Heart {
+    int32 id = 1;
+    string message = 2;
+}
+
+message Beat {
+    int32 id = 1;
+    string message = 2;
+}
